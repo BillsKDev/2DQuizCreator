@@ -8,18 +8,9 @@ public class QuestionSO : ScriptableObject
     [SerializeField] string[] answers = new string[4];
     [SerializeField] int correctAnswerIndex;
 
-    public string GetQuestion()
-    {
-        return question;
-    }
+    public string GetQuestion() => question;
 
-    public int GetCorrectAnswerIndex()
-    {
-        return correctAnswerIndex;
-    }
+    public int GetCorrectAnswerIndex() => correctAnswerIndex;
 
-    public string GetAnswer(int index)
-    {
-        return answers[index];
-    }
+    public string GetAnswer(int index) => answers[index];
 }
