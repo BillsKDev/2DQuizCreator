@@ -11,15 +11,9 @@ public class Timer : MonoBehaviour
 
     float timerValue;
 
-    void Update()
-    {
-        UpdateTimer();
-    }
+    void Update() => UpdateTimer();
 
-    public void CancelTimer()
-    {
-        timerValue = 0;
-    }
+    public void CancelTimer() => timerValue = 0;
 
     void UpdateTimer()
     {
@@ -28,10 +22,7 @@ public class Timer : MonoBehaviour
         if (isAnsweringQuestion)
         {
             if (timerValue > 0)
-            {
                 fillFraction = timerValue / timeToCompleteQuestion;
-
-            }
             else
             {
                 isAnsweringQuestion = false;
@@ -41,9 +32,7 @@ public class Timer : MonoBehaviour
         else
         {
             if (timerValue > 0)
-            {
                 fillFraction = timerValue / timeToShowCorrectAnswer;
-            }
             else
             {
                 isAnsweringQuestion = true;
